@@ -1,0 +1,78 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Bookingsystem {
+Brugertype
+Brugernavn
+Kodeord
+}
+
+class Bruger {
+Navn
+ID
+}
+
+class Underviser {
+Fakultet
+Kurser
+}
+
+class Studerende {
+Fakultet
+Studie
+Årgang
+}
+
+class Administration {
+Fakultet
+Navn
+ID
+}
+
+class Lokaler {
+Kapacitet
+Lokation
+Ledighed
+}
+
+class Anmodninger {
+Underviser
+Lokale
+Dato
+Ledighed
+}
+
+class Skema {
+Kurser
+Underviser
+Dato
+Tid
+Lokation
+}
+
+class Kurser {
+Fakultet
+Underviser
+Semester
+Lokation
+}
+
+Skema "1" <|-- "1" Bruger
+Bruger "1"<--"1" Underviser
+Bruger "1"<-- "1" Studerende
+Bruger "1"<--"1" Administration
+Bookingsystem "1" --* "1*" Lokaler
+
+Administration "1"--"0*" Anmodninger
+Underviser "1"-- "0*" Anmodninger
+
+Lokaler "1*" <|-- "1" Skema
+
+Bookingsystem "1"--* "1*" Kurser
+
+Kurser "1*"*-- "1"Skema
+
+Kurser "1" --* "1*" Underviser
+
+Kurser "1" --* "1*" Studerende
+@enduml
