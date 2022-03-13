@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+left to right direction
+actor Studerende as stud #pink;line:red;line.bold;text:red
+actor Underviser as und #palegreen;line:green;line.bold;text:green
+actor Administration as admin #white;line:black;line.bold;text:black
+package "Bookingsystem" #lightblue;line:black;line.bold;text:red {
+  usecase "Se skema" as UC1 #aliceblue;line:blue;line.bold;text:blue
+  usecase "Se ledighed" as UC2 #aliceblue;line:blue;line.bold;text:blue
+  usecase "Anmode om booking eller ændring af lokale" as UC3 #aliceblue;line:blue;line.bold;text:blue
+  usecase "Godkendelse af booking/lokaleændring" as UC4 #aliceblue;line:blue;line.bold;text:blue
+}
+(UC3) .> (UC2) : <<extend>>
+(UC3) .> (UC4) : <<include>>
+
+stud -- UC1
+und -- UC1
+und -- UC2
+und -- UC3
+UC1 -- admin
+UC2 -- admin
+UC4 -- admin
+
+@enduml
