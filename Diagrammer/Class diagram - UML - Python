@@ -57,16 +57,16 @@ Semester
 Lokation
 }
 
-Skema "1" <|-- "1" Bruger
-Bruger "1"<--"1" Underviser
-Bruger "1"<-- "1" Studerende
-Bruger "1"<--"1" Administration
+Bookingsystem "1" --* "1*" Bruger
+Bruger "1"<|--"1" Underviser
+Bruger "1"<|-- "1" Studerende
+Bruger "1"<|--"1" Administration
 Bookingsystem "1" --* "1*" Lokaler
 
 Administration "1"--"0*" Anmodninger
 Underviser "1"-- "0*" Anmodninger
 
-Lokaler "1*" <|-- "1" Skema
+Lokaler "1*" <-- "1" Skema
 
 Bookingsystem "1"--* "1*" Kurser
 
