@@ -1,1 +1,0 @@
-C:\Users\anton\Documents\Systemudvikling\venv\Scripts\pyuic6.exe -x "C:\Users\anton\Documents\GitHub\Systemudvikling\GUI - XML\Sekretar v2.ui" -o "C:\Users\anton\Documents\GitHub\Systemudvikling\GUI - Python\Sekretar v2.py"
