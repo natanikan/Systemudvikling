@@ -1,4 +1,3 @@
-from Underviser import Underviser
 from Database import Database
 from PyQt6 import QtWidgets, uic
 
@@ -20,5 +19,5 @@ class UnderviserGUI(QtWidgets.QWidget):
         kursus = self.kursusDropdownForporgsel.currentText()
         print(kursus)
         db = Database()
-        db.addAnmodninger('Yaasir', kursus, dato,f'{start_tid}-{slut_tid}')
+        db.addAnmodninger('Jakob Andersen', kursus, dato, f'{start_tid}-{slut_tid}')
 
