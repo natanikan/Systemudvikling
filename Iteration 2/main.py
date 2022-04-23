@@ -1,6 +1,6 @@
 from PyQt6 import QtWidgets
-from UnderviserGUI import UnderviserGUI
-from SekretarGUI import SekretarGUI
+from Controller.UnderviserGUI import UnderviserGUI
+from Controller.SekretarGUI import SekretarGUI
 import sys
 
 def main():
