@@ -4,7 +4,7 @@ from PyQt6 import QtWidgets, uic
 class UnderviserGUI(QtWidgets.QWidget):
     def __init__(self):
         super(UnderviserGUI, self).__init__()
-        uic.loadUi('UI/UnderviserV2.ui', self)
+        uic.loadUi('View/UnderviserV2.ui', self)
         self.lavForsporgselButton.clicked.connect(self.forsporgsel_pressed)
         self.show()
 

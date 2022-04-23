@@ -6,7 +6,7 @@ db = Database()
 class SekretarGUI(QtWidgets.QWidget):
     def __init__(self):
         super(SekretarGUI, self).__init__()
-        uic.loadUi('UI/Sekretar.ui', self)
+        uic.loadUi('View/Sekretar.ui', self)
         self.show()
         x = ["1","2","3"]
         req = db.showAnmodninger()

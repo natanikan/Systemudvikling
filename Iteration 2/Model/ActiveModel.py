@@ -7,4 +7,3 @@ class ActiveModel(object):
     @classmethod
     def add_anmodning(cls,anmodning):
         cls.list_anmodninger.append(anmodning)
-        
